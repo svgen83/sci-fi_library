@@ -32,7 +32,9 @@ def rebuild():
     for current_page, books_on_page in enumerate(books_on_pages, 1):
         row_books = list(chunked(books_on_page, in_row_quantity))
         rendered_page = template.render(books=row_books,
-                                        pages=page_numbers
+                                        pages=page_numbers,
+                                        current_page=current_page,
+                                        last_page=page_quantity
                                         )
         page_path = os.path.join('pages', f'index{current_page}.html')
         with open(page_path, 'w', encoding="utf8") as file:
