@@ -2,7 +2,7 @@ import json
 import os
 
 from livereload import Server, shell
-
+from math import ceil
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from more_itertools import chunked
 
@@ -10,6 +10,9 @@ from more_itertools import chunked
 
 
 def rebuild():
+    on_page_quantity = 10
+    in_row_quantity = 2
+    
     env = Environment(loader=FileSystemLoader('.'),
                       autoescape=select_autoescape(['html', 'xml'])
                       )
@@ -20,13 +23,18 @@ def rebuild():
         books_description_json = file.read()
 
     books_description = json.loads(books_description_json)
-    books_on_pages = list(chunked(books_description, 10))
+    
+    books_on_pages = list(chunked(books_description, on_page_quantity))
 
-
-    for i, books_on_page in enumerate(books_on_pages, 1):
-        row_books = list(chunked(books_on_page, 2))
-        rendered_page = template.render(books=row_books)
-        page_path = os.path.join('pages', f'index{i}.html')
+    page_quantity = ceil(len(books_description)/len(books_on_pages))
+    page_numbers = list(range(1, page_quantity + 1))
+    
+    for current_page, books_on_page in enumerate(books_on_pages, 1):
+        row_books = list(chunked(books_on_page, in_row_quantity))
+        rendered_page = template.render(books=row_books,
+                                        pages=page_numbers
+                                        )
+        page_path = os.path.join('pages', f'index{current_page}.html')
         with open(page_path, 'w', encoding="utf8") as file:
             file.write(rendered_page) 
 

@@ -11,6 +11,15 @@
     <title>Библиотека фантастики</title>
   </head>
   <body>
+	  <nav aria-label="Page navigation example">
+    	<ul class="pagination">
+    		<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+				{% for page in pages %}
+    		<li class="page-item"><a class="page-link" href="./index{{page}}.html">{{page}}</a></li>
+				{% endfor %}
+    		<li class="page-item"><a class="page-link" href="#">Next</a></li>
+  	  </ul>
+	  </nav>
 		<div class="container">
 				{% for books_in_row in books%}
 		  <div class="row">
