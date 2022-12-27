@@ -39,8 +39,6 @@ def rebuild():
                                         last_page=page_quantity
                                         )
         page_path = os.path.join('pages', f'index{current_page}.html')
-        with open('index.html', 'w', encoding="utf8") as file:
-            file.write(rendered_page)
         with open(page_path, 'w', encoding="utf8") as file:
             file.write(rendered_page)
 
