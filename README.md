@@ -18,6 +18,8 @@ python render_website.py
 ```
 Затем запустить сайт с помощью страницы с именем `index.html` в папке `pages`
 
+[сайт](https://svgen83.github.io/sci-fi_library/)
+
 ![site](https://user-images.githubusercontent.com/61458549/209626259-50f36814-b698-49de-9926-af3b2c8c7b48.jpg)
 
 
