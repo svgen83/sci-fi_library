@@ -1,6 +1,6 @@
 # Сайт-библиотека научной фантастики
  
-Проект является продолжением [другого проекта, созданного для парсинга страниц и скачивания книг жанра "Научная фантастика"](https://github.com/svgen83/book_parser).
+Проект является продолжением [другого проекта](https://github.com/svgen83/book_parser), созданного для парсинга страниц и скачивания книг жанра "Научная фантастика".
 
 ## Как установить
 
@@ -16,9 +16,8 @@ pip install -r requirements.txt
 ```
 python render_website.py
 ```
-Затем запустить сайт с помощью страницы с именем `index.html` в папке `pages`
-
-[сайт](https://svgen83.github.io/sci-fi_library/pages/index1.html)
+Затем запустить сайт по адресу http://127.0.0.1:5500/
+Посмотреть сайт можно [тут](https://svgen83.github.io/sci-fi_library/pages/index1.html)
 
 ![site](https://user-images.githubusercontent.com/61458549/209626259-50f36814-b698-49de-9926-af3b2c8c7b48.jpg)
 
