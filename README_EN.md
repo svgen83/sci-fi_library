@@ -1,6 +1,6 @@
 ﻿# Science Fiction Library Site
  
-The project is a continuation of [another project created to parse pages and download science fiction books](https://github.com/svgen83/book_parser).
+The project is a continuation of [another project](https://github.com/svgen83/book_parser)created to parse pages and download science fiction books.
 
 ## How to install
 
@@ -16,9 +16,8 @@ To create a site, run the script
 ```
 python render_website.py
 ```
-Then start the site with a page named `index.html` in the `pages` folder
-
-[site](https://svgen83.github.io/sci-fi_library/pages/index1.html)
+Then launch the site at http://127.0.0.1:5500/
+You can view the site [here](https://svgen83.github.io/sci-fi_library/pages/index1.html)
 
 ![site](https://user-images.githubusercontent.com/61458549/209626259-50f36814-b698-49de-9926-af3b2c8c7b48.jpg)
 
