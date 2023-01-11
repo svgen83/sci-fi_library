@@ -40,6 +40,13 @@ def rebuild():
         books_description_json = file.read()
 
     books_descriptions = json.loads(books_description_json)
+
+    for book_descriptions in books_descriptions:
+        image_url = book_descriptions['image_path'].replace('\\', '/')
+        book_url = book_descriptions['text_path'].replace('\\', '/')
+        book_descriptions.update({'image_url': image_url,
+                                  'book_url': book_url})  
+
     books_on_pages = list(chunked(books_descriptions, args.books_quantity))
     page_quantity = ceil(len(books_descriptions)/args.books_quantity)
     page_numbers = list(range(1, page_quantity + 1))
