@@ -14,12 +14,12 @@ pip install -r requirements.txt
 ## How to start
 To launch the site, you must first download books, covers and a file with a description of books in the `.json` format.
 How to do this is written in the description of the [mentioned project] (https://github.com/svgen83/book_parser).
-
-To create a site, run the script
+Then copy the file `render_website.py` to the folder containing the file with the description of the books, as well as directories with books and covers
+To create a site from the command line, run the script
 ```
 python render_website.py
 ```
-By default, 10 books will be displayed per page, and the `.json` data file must be placed in the directory with the program.
+By default, the program will create pages on which 10 books will be displayed, while the `.json` data file must be placed in the directory with the program.
 You can change the settings if you wish.
 + `-pb` or `--path_to_base` allow you to specify the path to the data file;
 + `-bq` or `--books_quantity` allows you to specify the desired number of books on the site page.
