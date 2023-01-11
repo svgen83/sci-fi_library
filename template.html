@@ -15,7 +15,7 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination pagination-lg justify-content-center" style="padding: 30px">
 			  {% if current_page==1 %}
-          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Предыдущая страница</a></li>
+          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Предыдущая страница</a></li>
 				{% else %}
           <li class="page-item"><a class="page-link" href="../pages/index{{ current_page-1 }}.html">Предыдущая страница</a></li>
 				{% endif %}
@@ -28,7 +28,7 @@
 				{% endif %}
 				{% endfor %}
 				{% if current_page==last_page %}
-          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Следующая страница</a></li>
+          <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Следующая страница</a></li>
 				{% else %}
           <li class="page-item"><a class="page-link" href="../pages/index{{ current_page+1 }}.html">Следующая страница</a></li>
 				{% endif %}
