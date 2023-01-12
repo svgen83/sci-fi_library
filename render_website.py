@@ -37,9 +37,7 @@ def rebuild():
     os.makedirs('pages', exist_ok=True)
 
     with open(args.path_to_base) as file:
-        books_description_json = file.read()
-
-    books_descriptions = json.loads(books_description_json)
+        books_descriptions = json.load(file)
 
     for book_descriptions in books_descriptions:
         image_url = book_descriptions['image_path'].replace('\\', '/')
@@ -76,5 +74,5 @@ def main():
     server.serve(root='.')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
