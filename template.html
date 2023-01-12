@@ -24,7 +24,7 @@
 				{% if page==current_page %}
           <li class="page-item active"><a class="page-link" href="../pages/index{{ page }}.html">{{ page }}</a></li>
 				{% else %}
-        <li class="page-item"><a class="page-link" href="../pages/index{{page}}.html">{{ page }}</a></li>
+          <li class="page-item"><a class="page-link" href="../pages/index{{page}}.html">{{ page }}</a></li>
 				{% endif %}
 				{% endfor %}
 				{% if current_page==last_page %}
@@ -39,8 +39,8 @@
 		  {% for books_in_row in books %}
       <div class="row">
 			  {% for book in books_in_row %}
-        <div class="col-sm" style="margin: 5px; width: 600px; height: 300px">
-          <div class="card mb-3" style="max-width: 600px;">
+        <div class="col-sm" style="margin-left: 200px; margin-right: 100px; margin-top: 80px; width: 600px; height: 300px">
+          <div class="card border-primary mb-3" style="max-width: 600px;">
             <div class="row no-gutters">
               <div class="col-md-4">
 							  <img src=".{{ book.image_url|urlencode }}" class="card-img" alt="обложка книги {{ book.book_title }}">
@@ -53,12 +53,12 @@
                     <span class="badge badge-secondary">{{ genre }}</span>
 										{% endfor %}
                   <hr>
-                    <a href=".{{ book.book_url|urlencode }}" target="_blank">Читать</a>
-               </div>
-             </div>
-             </div>
+                  <a href=".{{ book.book_url|urlencode }}" target="_blank">Читать</a>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 			  {% endfor %}
 		  </div>
 		  {% endfor %}
